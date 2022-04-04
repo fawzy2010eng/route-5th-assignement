@@ -25,7 +25,7 @@
     z-index: 9;
     flex-direction: column;
     text-transform: capitalize;
-    font-size: 2rem;
+    font-size: 1rem;
 }
 .head .front div{
     height: 1rem;
@@ -36,7 +36,7 @@
     font-size: 8rem;
     color: #F1F3F4;
     text-transform: uppercase;
-    font-size: 7rem;
+    font-size: 4rem;
 }
 
 
@@ -80,6 +80,9 @@
     cursor: pointer;
     color: #20C997;
 }
+.banner .navbar .bars{
+    display: none;
+} 
 .banner .main{
     display: flex;
     width: 100%;
@@ -105,8 +108,6 @@
     color: white;
     cursor: pointer;
 }
-
-
 
 
 /* about */
@@ -167,6 +168,7 @@
 }
 .about .main .stats{
     display: flex;
+    flex-wrap: wrap ;
     justify-content: space-between;
     align-items: center;
     width: 100%;
@@ -203,7 +205,6 @@
     background-color: white;
     margin-right: 1.2rem;
     font-size: 1.4rem;
-    
     width: 3rem;
     height: 3rem;
     display: flex;
@@ -341,9 +342,9 @@
     cursor: pointer;
 }
 .portfolio .sections{
-    padding-left: 10%;
-    padding-right: 10%;
+    padding: 0 10%;
     display: flex;
+    justify-content: center;
     flex-wrap: wrap;
 }
 .portfolio .sections .section{
@@ -391,12 +392,11 @@
 .testimonials .main .reviews{
     display: flex;
     justify-content: space-between;
+    flex-wrap: wrap;
 }
 .testimonials .main .reviews .review{
     background-color: #f8f9fa;
     width: 45%;
-}
-.testimonials .main .reviews .review {
     display: flex;
     flex-direction: column;
     padding: 1rem;
@@ -501,4 +501,102 @@
     justify-content: center;
     align-items: center;
     cursor: pointer;
+}
+
+
+
+
+
+
+
+
+
+@media only screen and (max-width: 992px) {
+    .banner .navbar ul{
+        display: none;
+
+    }
+    .banner .navbar .bars{
+        display: block;
+    }
+    .about .content {
+        flex-direction: column;
+        text-align: center;
+    }
+    .about .main .content .left,.about .main .content .right{
+        text-align: center;
+        width: 80%;
+    }
+    .about button{
+        margin: auto;
+    }
+    .about .stats .item{
+        width: 50%;
+        margin-bottom: 2rem;
+    }
+
+    .services .main .item{
+        width: 100%;
+        text-align: center;
+    }
+
+    .resume .edu-exp {
+        flex-direction: column;
+
+    }
+    .resume .edu-exp >div{
+        width: 80%;
+    }
+    .resume .edu-exp .item{
+        text-align: center;
+    }
+    .resume .skills .item {
+        width:100%
+    }
+
+
+    .portfolio .section{
+        width: 50%!important;    
+    }
+
+
+    .testimonials .review{
+        width: 100%!important;
+        text-align: center;
+        margin-bottom: 2rem;
+    }
+    .testimonials .review .top{
+        justify-content: center;
+    }
+    .contact .main {
+        flex-wrap: wrap;
+        flex-direction: column-reverse;
+    }
+    .contact .main >div{
+        width: 100%!important;
+        text-align: center;
+    }
+    .contact button{
+        margin-bottom: 2rem;
+        margin-top: 2rem!important;
+    }
+    .contact .main .data h4{
+        margin-bottom: 1.4rem;
+    }
+}
+
+
+
+@media only screen and (max-width: 768px){
+    .portfolio .section{
+        width: 100%!important;    
+    }
+    .about .stats .item{
+        width: 100%;
+    }
+}
+
+
+@media only screen and (max-width: 576px) {
+    
 }
